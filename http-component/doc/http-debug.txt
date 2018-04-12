@@ -1,0 +1,29 @@
+http debug (HTTP 调试客户端)
+
+需求整理
+1) 配置请求参数(示例): 
+协议类型: http
+IP地址: 127.0.0.1
+端口号: 8080
+请求方法: GET | POST
+应用上下文: appServer
+内容类型: application/json  application/xml
+请求参数: param1=value1&param2=value2...
+文件上传_本地路径: C:/a/a.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.hua</groupId>
+		<artifactId>http-entire</artifactId>
+		<version>0.0.1</version>
+	</parent>	
+
+	<artifactId>http-kit</artifactId>
+	<packaging>jar</packaging>
+	<name>http-kit</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<http.version>0.0.1</http.version>
+		<http-kit.version>2.1.0</http-kit.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>http</artifactId>
+			<version>${http.version}</version>
+		</dependency>
+
+<!-- 		<dependency>
+			<groupId>http-kit</groupId>
+			<artifactId>http-kit</artifactId>
+			<version>${http-kit.version}</version>
+		</dependency> -->
+		
+	</dependencies>
+
+</project>

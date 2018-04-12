@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.hua</groupId>
+		<artifactId>http-entire</artifactId>
+		<version>0.0.1</version>
+	</parent>	
+
+	<artifactId>http-component</artifactId>
+	<packaging>jar</packaging>
+	<name>http-component</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<http.version>0.0.1</http.version>
+		<httpcomponents.httpclient.version>4.5.2</httpcomponents.httpclient.version>
+		<httpcomponents.httpmime.version>4.5.2</httpcomponents.httpmime.version>		
+		<httpcomponents.httpcore.version>4.4.5</httpcomponents.httpcore.version>
+		<httpcomponents.fluent-hc.version>4.5.2</httpcomponents.fluent-hc.version>		
+		<httpcomponents.httpclient-cache.version>4.5.2</httpcomponents.httpclient-cache.version>		
+		<httpcomponents.httpasyncclient.version>4.1.2</httpcomponents.httpasyncclient.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>http</artifactId>
+			<version>${http.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpcomponents.httpclient.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>${httpcomponents.httpcore.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore-nio</artifactId>
+			<version>${httpcomponents.httpcore.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.httpmime.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>${httpcomponents.fluent-hc.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpasyncclient</artifactId>
+			<version>${httpcomponents.httpasyncclient.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>${httpcomponents.httpclient-cache.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

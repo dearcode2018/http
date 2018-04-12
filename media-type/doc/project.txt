@@ -1,0 +1,49 @@
+【项目信息】
+项目名称 : media-type
+中文名称 : HTTP 媒介类型
+项目版本 : version 1.0
+
+主要技术 : 
+
+项目描述 : 
+
+项目备注 : 
+
+【项目规划】
+
+1) 问题情况
+xml: application/xml application/atom+xml application/xhtml+xml text/xml
+2)
+
+3)
+
+4)
+
+5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
