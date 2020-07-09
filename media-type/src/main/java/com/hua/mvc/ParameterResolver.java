@@ -144,7 +144,7 @@ public class ParameterResolver implements HandlerMethodArgumentResolver
 						throws IllegalArgumentException
 				{
 					// 根据约定的标准格式,转成日期对象
-					setValue(DateTimeUtil.parseStandardDate(text));
+					setValue(DateTimeUtil.parseDateTime(text));
 					//log.info("setAsText =====> 根据约定的标准格式,转成日期对象");
 					//super.setAsText(text);
 				}
@@ -232,7 +232,7 @@ public class ParameterResolver implements HandlerMethodArgumentResolver
 							throws IllegalArgumentException
 					{
 						// 根据约定的标准格式,转成日期对象
-						setValue(DateTimeUtil.parseStandardDate(text));
+						setValue(DateTimeUtil.parseDateTime(text));
 						//super.setAsText(text);
 					}
 					/**

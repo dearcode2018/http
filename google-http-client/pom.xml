@@ -53,6 +53,18 @@
 			<artifactId>google-http-client-protobuf</artifactId>
 			<version>${google-http-client.version}</version>
 		</dependency>	
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>	
 	
 	</dependencies>
 

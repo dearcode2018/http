@@ -85,7 +85,7 @@ public class ParameterResolver implements WebArgumentResolver
 				{
 					public void setAsText(String value)
 					{
-						setValue(DateTimeUtil.parseStandardDate(value));
+						setValue(DateTimeUtil.parseDateTime(value));
 					}
 
 					public String getAsText()

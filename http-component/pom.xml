@@ -14,11 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<http.version>0.0.1</http.version>
-		<httpcomponents.httpclient.version>4.5.2</httpcomponents.httpclient.version>
-		<httpcomponents.httpmime.version>4.5.2</httpcomponents.httpmime.version>		
-		<httpcomponents.httpcore.version>4.4.5</httpcomponents.httpcore.version>
-		<httpcomponents.fluent-hc.version>4.5.2</httpcomponents.fluent-hc.version>		
-		<httpcomponents.httpclient-cache.version>4.5.2</httpcomponents.httpclient-cache.version>		
+		<httpcomponents.version>4.5.12</httpcomponents.version>
 		<httpcomponents.httpasyncclient.version>4.1.2</httpcomponents.httpasyncclient.version>
 	</properties>
 
@@ -32,15 +28,16 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>${httpcomponents.httpclient.version}</version>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>${httpcomponents.httpcore.version}</version>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 
+	<!-- 	
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore-nio</artifactId>
@@ -50,13 +47,13 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>${httpcomponents.httpmime.version}</version>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>fluent-hc</artifactId>
-			<version>${httpcomponents.fluent-hc.version}</version>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 
 		<dependency>
@@ -68,8 +65,8 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient-cache</artifactId>
-			<version>${httpcomponents.httpclient-cache.version}</version>
-		</dependency>
+			<version>${httpcomponents.version}</version>
+		</dependency> -->
 
 	</dependencies>
 

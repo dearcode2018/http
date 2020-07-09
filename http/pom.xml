@@ -26,7 +26,7 @@
 			<version>${common.version}</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
 			<version>${httpcomponent.version}</version>
@@ -78,7 +78,14 @@
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
 			<version>${httpclient.version}</version>
-		</dependency>	
+		</dependency>	 -->
+	
+<!-- 		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>		 -->
+	
 		
 	</dependencies>
 

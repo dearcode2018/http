@@ -18,10 +18,11 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 
 import com.hua.log.BaseLog;
 
@@ -63,7 +64,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@BeforeClass
+	@DisplayName("beforeClass")
+	@BeforeAll
 	public static void beforeClass() {
 		System.out.println("beforeClass()");
 	}
@@ -74,7 +76,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@AfterClass
+	@DisplayName("afterClass")
+	@AfterAll
 	public static void afterClass() {
 		System.out.println("afterClass()");
 	}
@@ -85,7 +88,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@Before
+	@DisplayName("beforeMethod")
+	@BeforeEach
 	public void beforeMethod() {
 		System.out.println("beforeMethod()");
 	}
@@ -96,7 +100,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@After
+	@DisplayName("afterMethod")
+	@AfterEach
 	public void afterMethod() {
 		System.out.println("afterMethod()");
 	}

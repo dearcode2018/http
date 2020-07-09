@@ -7,21 +7,11 @@
  */
 package com.hua.test;
 
-// 静态导入
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 
 import com.hua.log.BaseLog;
 
@@ -32,30 +22,11 @@ import com.hua.log.BaseLog;
  * @author qye.zheng
  * BaseTest
  */
-//@RunWith()
+//@RunWith(JUnitPlatform.class)
+//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+@DisplayName("BaseTest")
 public class BaseTest extends BaseLog {
 	
-	public HttpClient httpClient;
-	
-	public HttpGet httpGet;
-	
-	public HttpPost httpPost;
-	
-	public HttpRequest request;
-	
-	public HttpResponse response;
-	
-	public OutputStream output;
-	
-	public InputStream input;
-	
-	public String result;
-	
-	public URL serverUrl;
-	
-	public HttpURLConnection httpUrlConn;
-	
-	public static String testUrl = "http://127.0.0.1:8080/servlet3/TestServlet";
 	
 	/**
 	 * 
@@ -63,7 +34,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@BeforeClass
+	@DisplayName("beforeClass")
+	@BeforeAll
 	public static void beforeClass() {
 		System.out.println("beforeClass()");
 	}
@@ -74,7 +46,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@AfterClass
+	@DisplayName("afterClass")
+	@AfterAll
 	public static void afterClass() {
 		System.out.println("afterClass()");
 	}
@@ -85,7 +58,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@Before
+	@DisplayName("beforeMethod")
+	@BeforeEach
 	public void beforeMethod() {
 		System.out.println("beforeMethod()");
 	}
@@ -96,7 +70,8 @@ public class BaseTest extends BaseLog {
 	 * @author qye.zheng
 	 * 
 	 */
-	@After
+	@DisplayName("afterMethod")
+	@AfterEach
 	public void afterMethod() {
 		System.out.println("afterMethod()");
 	}
