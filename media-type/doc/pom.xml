@@ -4,7 +4,7 @@
 
 	<groupId>com.hua</groupId>
 	<artifactId>spring-mvc</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>spring-mvc</name>
 	<properties>
@@ -13,7 +13,7 @@
 		<!-- jta -->
 		<javax.transaction.jta.version>1.1</javax.transaction.jta.version>		
 
-		<spring.web.version>0.0.1</spring.web.version>
+		<spring.web.version>1.0.0</spring.web.version>
 		<!-- spring -->
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<spring.dao.version>2.0.8</spring.dao.version>

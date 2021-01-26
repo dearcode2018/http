@@ -4,13 +4,13 @@
 
 	<groupId>com.hua</groupId>
 	<artifactId>http-component</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>http-component</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<http.version>0.0.1</http.version>
+		<http.version>1.0.0</http.version>
 		<httpcomponents.httpclient.version>4.5.2</httpcomponents.httpclient.version>
 		<httpcomponents.httpcore.version>4.4.5</httpcomponents.httpcore.version>
 		<httpcomponents.httpasyncclient.version>4.1.2</httpcomponents.httpasyncclient.version>
@@ -19,7 +19,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.hua</groupId>
-			<artifactId>http</artifactId>
+			<artifactId>http-core</artifactId>
 			<version>${http.version}</version>
 		</dependency>
 

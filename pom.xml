@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hua</groupId>
   <artifactId>http-entire</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>http-entire</name>
   <description>http Maven Entire Project</description>
@@ -11,7 +11,7 @@
 	<modules>
 		<!-- 模板 -->
 		<module>http-template</module>		
-		<module>http</module>				
+		<module>http-core</module>				
 		<module>http-client</module>		
 		<module>http-component</module>		
 		<module>http-debug</module>		
@@ -24,7 +24,7 @@
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.version>0.0.1</maven.version>
+		<maven.version>1.0.0</maven.version>
 		<maven.plugin.compiler.version>3.3</maven.plugin.compiler.version>
 		<maven.plugin.source.version>2.4</maven.plugin.source.version>
 		<maven.plugin.surefire.version>2.18.1</maven.plugin.surefire.version>
@@ -32,10 +32,87 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
-		<http.version>0.0.1</http.version>		
-		<httpcomponents.version>4.5.12</httpcomponents.version>		
+		<http.version>1.0.0</http.version>		
+		<httpcomponents.version>4.5.12</httpcomponents.version>	
+		<com.hua.http.version>1.0.0</com.hua.http.version>
+		<google-http-client.version>1.22.0</google-http-client.version>	
+		<common.version>1.0.0</common.version>
+		<!-- 2.4 不行 -->
+		<json.lib.version>2.2</json.lib.version>
+		<org.json.version>20141113</org.json.version>
+		<javax.validation.version>1.1.0.Final</javax.validation.version>	
+						
 	</properties>  
   
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>http-core</artifactId>
+				<version>${com.hua.http.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.google.http-client</groupId>
+				<artifactId>google-http-client</artifactId>
+				<version>${google-http-client.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>com.google.http-client</groupId>
+				<artifactId>google-http-client-jackson2</artifactId>
+				<version>${google-http-client.version}</version>
+			</dependency>	
+		
+			<dependency>
+				<groupId>com.google.http-client</groupId>
+				<artifactId>google-http-client-gson</artifactId>
+				<version>${google-http-client.version}</version>
+			</dependency>	
+			
+			<dependency>
+				<groupId>com.google.http-client</groupId>
+				<artifactId>google-http-client-xml</artifactId>
+				<version>${google-http-client.version}</version>
+			</dependency>				
+	
+			<dependency>
+				<groupId>com.google.http-client</groupId>
+				<artifactId>google-http-client-protobuf</artifactId>
+				<version>${google-http-client.version}</version>
+			</dependency>	
+	
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpcomponents.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpmime</artifactId>
+				<version>${httpcomponents.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>common</artifactId>
+				<version>${common.version}</version>
+			</dependency>	
+		
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>${org.json.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${javax.validation.version}</version>
+			</dependency>										
+		</dependencies>
+	</dependencyManagement>  
   
  	<!-- 公共构建 -->
 	<build>
@@ -127,12 +204,20 @@
 				</configuration>
 			</plugin>
 
-			<!-- 解决 web项目pom.xml报错 -->
+			<!-- 要将源码放上去，需要加入这个插件 -->
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-source-plugin</artifactId>
 				<configuration>
-					<version>${maven.plugin.war.version}</version>
+					<attach>true</attach>
 				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
